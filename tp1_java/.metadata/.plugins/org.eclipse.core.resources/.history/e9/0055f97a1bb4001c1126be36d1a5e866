@@ -1,0 +1,26 @@
+
+public class Segment {
+	Point eDr,eGa;
+	void Deplacer_Abs(float a) {
+		eDr.Deplacer(eDr.x+a, 0);
+		eGa.Deplacer(eGa.x+a, 0);
+		
+	}
+	void Deplacer_Ord(float b) {
+		eDr.Deplacer(0, eDr.x+b);
+		eGa.Deplacer(0, eGa.x+b);
+		
+	}
+	float Longueur() {
+		return (float) Math.sqrt(((eDr.x-eGa.x)*(eDr.x-eGa.x))+((eDr.y-eGa.y)*(eDr.y-eGa.y)));
+	}
+	
+
+	public void Afficher() {
+		System.out.println("Segment [extremiteDroite=(" + eDr.x +","+ eDr.y + "), extremiteGauche=(" + eGa.x + "," +eGa.y + ")]");
+	}
+	Segment(Point eDr,Point eGa){
+		this.eDr=eDr;
+		this.eGa=eGa;
+	}
+}

@@ -1,0 +1,23 @@
+
+public class Segment {
+	Point eDr,eGa;
+	void Deplacer_Abs(float a) {
+		eDr.Deplacer(a, 0);
+		eGa.Deplacer(a, 0);
+		
+	}
+	void Deplacer_Ord(float a) {
+		eDr.Deplacer(0, a);
+		eGa.Deplacer(0, a);
+		
+	}
+	void Longueur() {
+		sqrt(((eDr.x-eGa.x)*(eDr.x-eGa.x))+((eDr.y-eGa.y)*(eDr.y-eGa.y)));
+	}
+	
+
+	public void Afficher() {
+		System.out.println("Segment [extremiteDroite=" + eDr + ", extremiteGauche=" + eGa + "]");
+	}
+	
+}
